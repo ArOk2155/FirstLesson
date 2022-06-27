@@ -6,7 +6,6 @@ namespace FirstLesson
     {
         static void Main(string[] args)
         {
-            // Hello, Sviatoslav!
 
             Console.Write("Select the task (1-7): ");
             int TaskNumber = Convert.ToInt32(Console.ReadLine());
@@ -40,22 +39,21 @@ namespace FirstLesson
             }
         }
 
+        // The user enters the number of hours, output the number of minutes in that number of hours.
+        // There is no specification about the type of data that the user enters. We use integers.
         static void Task1()
         {
-            // The user enters the number of hours, output the number of minutes in that number of hours.
-            // There is no specification about the type of data that the user enters. We use integers.
-
             Console.WriteLine("Enter the number of hours:");
             
             int Hours = Convert.ToInt32(Console.ReadLine());
             
             Console.WriteLine("Number of minutes: " + Hours*60);
         }
+
+        // The user enters 2 numbers (A and B). Print the solution (5*A+B^2)/(B-A) to the console.
+        // Without the use of the construction "if" it is impossible to solve the problem completely.
         static void Task2()
         {
-            // The user enters 2 numbers (A and B). Print the solution (5*A+B^2)/(B-A) to the console.
-            // Without the use of the construction "if" it is impossible to solve the problem completely.
-
             Console.WriteLine("Enter the number A:");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
@@ -69,17 +67,11 @@ namespace FirstLesson
             
             Console.WriteLine("Result: " + (5*a+b*b)/(b-a));
         }
+
+        // The user enters 2 string values (A and B). Swap the contents of variables A and B.
+        // Can be done with two more variables
         static void Task3()
         {
-            // The user enters 2 string values (A and B). Swap the contents of variables A and B.
-            // Can be done with two more variables
-            // For example:
-            //...
-            //string c = a
-            //string d = b
-            // a = d
-            // b = c
-
             Console.WriteLine("Enter the string A:");
             string a = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Enter the string B:");
@@ -89,11 +81,11 @@ namespace FirstLesson
             
             Console.WriteLine("Result: " + a + " " + b);
         }
+
+        // The user enters 2 numbers (A and B). Print to the console the result of dividing A by B and the division remainder.
+        // Need to check for division by 0
         static void Task4()
         {
-            // The user enters 2 numbers (A and B). Print to the console the result of dividing A by B and the division remainder.
-            // Need to check for division by 0
-
             Console.WriteLine("Enter the number A:");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
@@ -107,11 +99,11 @@ namespace FirstLesson
             
             Console.WriteLine("Result (integer): " + (float) a / b + ", division remainder: " + (float) a % b);
         }
+
+        // The user enters 3 non-zero numbers (A, B and C). Print to the console the solution (X value) of the standard linear equation, where A*X+B=C.
+        // It's good that there is a clarification about non-zero values
         static void Task5()
         {
-            // The user enters 3 non-zero numbers (A, B and C). Print to the console the solution (X value) of the standard linear equation, where A*X+B=C.
-            // It's good that there is a clarification about non-zero values
-
             Console.WriteLine("Enter the number A:");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
@@ -121,12 +113,12 @@ namespace FirstLesson
             
             Console.WriteLine("Value X = " + (float) (c-b)/a);
         }
+
+        // The user enters 4 numbers (X1, Y1, X2, Y2) describing the coordinates of 2 points on the coordinate plane.
+        // Output the equation of a straight line in the format Y=AX+B passing through these points.
+        // Use Math.Round Method to improve the display
         static void Task6()
         {
-            // The user enters 4 numbers (X1, Y1, X2, Y2) describing the coordinates of 2 points on the coordinate plane.
-            // Output the equation of a straight line in the format Y=AX+B passing through these points.
-            // Use Math.Round Method to improve the display
-
             Console.WriteLine("Enter the number X1:");
             double x1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the number Y1:");
@@ -147,10 +139,10 @@ namespace FirstLesson
             
             Console.WriteLine(result);
         }
+
+        // The variable N stores a natural two-digit number (10-99). Write a program that calculates and displays the sum of the digits of n.
         static void Task7()
         {
-            // The variable N stores a natural two-digit number (10-99). Write a program that calculates and displays the sum of the digits of n.
-
             Console.WriteLine("Enter the number (10-99):");
             int someNumber = Convert.ToInt16(Console.ReadLine());
             
