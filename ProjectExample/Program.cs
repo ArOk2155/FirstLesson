@@ -7,7 +7,6 @@ namespace FirstLesson
         static void Main(string[] args)
         {
             // Hello, Sviatoslav!
-            //
 
             Console.Write("Select the task (1-7): ");
             int TaskNumber = Convert.ToInt32(Console.ReadLine());
