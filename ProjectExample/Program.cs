@@ -45,13 +45,12 @@ namespace FirstLesson
         {
             Console.WriteLine("Enter the number of hours:");
             
-            int Hours = Convert.ToInt32(Console.ReadLine());
+            int hours = Convert.ToInt32(Console.ReadLine());
             
-            Console.WriteLine("Number of minutes: " + Hours*60);
+            Console.WriteLine("Number of minutes: " + hours * 60);
         }
 
         // The user enters 2 numbers (A and B). Print the solution (5*A+B^2)/(B-A) to the console.
-        // Without the use of the construction "if" it is impossible to solve the problem completely.
         static void Task2()
         {
             Console.WriteLine("Enter the number A:");
@@ -59,17 +58,10 @@ namespace FirstLesson
             Console.WriteLine("Enter the number B:");
             int b = Convert.ToInt32(Console.ReadLine());
             
-            if (b == a)
-            {
-                Console.WriteLine("Number B should not be equal to number A. Enter the number B (not " + a + "):");
-                b = Convert.ToInt32(Console.ReadLine());
-            }
-            
-            Console.WriteLine("Result: " + (5*a+b*b)/(b-a));
+            Console.WriteLine("Result: " + (5 * a + b * b) / (b - a));
         }
 
         // The user enters 2 string values (A and B). Swap the contents of variables A and B.
-        // Can be done with two more variables
         static void Task3()
         {
             Console.WriteLine("Enter the string A:");
@@ -83,19 +75,12 @@ namespace FirstLesson
         }
 
         // The user enters 2 numbers (A and B). Print to the console the result of dividing A by B and the division remainder.
-        // Need to check for division by 0
         static void Task4()
         {
             Console.WriteLine("Enter the number A:");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
             int b = Convert.ToInt32(Console.ReadLine());
-            
-            if (b==0)
-            {
-                Console.WriteLine("Division by zero, enter the number B again:");
-                b = Convert.ToInt32(Console.ReadLine());
-            }
             
             Console.WriteLine("Result (integer): " + (float) a / b + ", division remainder: " + (float) a % b);
         }
@@ -111,7 +96,7 @@ namespace FirstLesson
             Console.WriteLine("Enter the number C:");
             int c = Convert.ToInt32(Console.ReadLine());
             
-            Console.WriteLine("Value X = " + (float) (c-b)/a);
+            Console.WriteLine("Value X = " + (float) (c - b) / a);
         }
 
         // The user enters 4 numbers (X1, Y1, X2, Y2) describing the coordinates of 2 points on the coordinate plane.
@@ -135,7 +120,7 @@ namespace FirstLesson
             // a = (y1 - y2)/(x1 - x2)
             double a = (y1 - y2) / (x1 - x2);
             double b = y2 - a * x2;
-            string result = (b > 0) ? "Y = " + Math.Round(a,3) + "X + " + Math.Round(b,3) : "Y = " + a + "X " + Math.Round(b,3);
+            string result = (b > 0) ? "Y = " + Math.Round(a, 3) + "X + " + Math.Round(b, 3) : "Y = " + a + "X " + Math.Round(b, 3);
             
             Console.WriteLine(result);
         }
