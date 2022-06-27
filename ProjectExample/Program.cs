@@ -46,7 +46,9 @@ namespace FirstLesson
             // There is no specification about the type of data that the user enters. We use integers.
 
             Console.WriteLine("Enter the number of hours:");
+            
             int Hours = Convert.ToInt32(Console.ReadLine());
+            
             Console.WriteLine("Number of minutes: " + Hours*60);
         }
         static void Task2()
@@ -58,11 +60,13 @@ namespace FirstLesson
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
             int b = Convert.ToInt32(Console.ReadLine());
+            
             if (b == a)
             {
                 Console.WriteLine("Number B should not be equal to number A. Enter the number B (not " + a + "):");
                 b = Convert.ToInt32(Console.ReadLine());
             }
+            
             Console.WriteLine("Result: " + (5*a+b*b)/(b-a));
         }
         static void Task3()
@@ -80,7 +84,9 @@ namespace FirstLesson
             string a = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Enter the string B:");
             string b = Convert.ToString(Console.ReadLine());
+            
             (a, b) = (b, a);
+            
             Console.WriteLine("Result: " + a + " " + b);
         }
         static void Task4()
@@ -92,11 +98,13 @@ namespace FirstLesson
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number B:");
             int b = Convert.ToInt32(Console.ReadLine());
+            
             if (b==0)
             {
                 Console.WriteLine("Division by zero, enter the number B again:");
                 b = Convert.ToInt32(Console.ReadLine());
             }
+            
             Console.WriteLine("Result (integer): " + (float) a / b + ", division remainder: " + (float) a % b);
         }
         static void Task5()
@@ -110,6 +118,7 @@ namespace FirstLesson
             int b = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the number C:");
             int c = Convert.ToInt32(Console.ReadLine());
+            
             Console.WriteLine("Value X = " + (float) (c-b)/a);
         }
         static void Task6()
@@ -135,6 +144,7 @@ namespace FirstLesson
             double a = (y1 - y2) / (x1 - x2);
             double b = y2 - a * x2;
             string result = (b > 0) ? "Y = " + Math.Round(a,3) + "X + " + Math.Round(b,3) : "Y = " + a + "X " + Math.Round(b,3);
+            
             Console.WriteLine(result);
         }
         static void Task7()
@@ -143,8 +153,10 @@ namespace FirstLesson
 
             Console.WriteLine("Enter the number (10-99):");
             int someNumber = Convert.ToInt16(Console.ReadLine());
+            
             int firstNum = someNumber % 10;
             int secondNum = someNumber / 10;
+            
             Console.WriteLine("Sum of digits: " + (firstNum + secondNum));
         }
     }
