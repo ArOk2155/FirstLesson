@@ -22,13 +22,9 @@ namespace FirstLesson
         }
 
         // The user enters 2 string values (A and B). Swap the contents of variables A and B.
-        static (int a, int b) Swap(ref int a, ref int b)
+        static (int a, int b) Swap(int a, int b)
         {
-            int temp = a;
-            a = b;
-            b = temp;
-
-            return (a, b);
+            return (b, a);
         }
 
         // The user enters 2 numbers (A and B). Print to the console the result of dividing A by B and the division remainder.
