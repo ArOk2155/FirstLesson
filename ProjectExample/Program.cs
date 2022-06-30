@@ -6,8 +6,7 @@ namespace FirstLesson
     {
         static void Main(string[] args)
         {
-
-            
+           Console.WriteLine(SumOfDigits(21));
         }
 
         // The user enters the number of hours, output the number of minutes in that number of hours.
@@ -23,7 +22,7 @@ namespace FirstLesson
         }
 
         // The user enters 2 string values (A and B). Swap the contents of variables A and B.
-        static (int a, int b) Swap(int a, int b)
+        static (int a, int b) Swap(ref int a, ref int b)
         {
             int temp = a;
             a = b;
